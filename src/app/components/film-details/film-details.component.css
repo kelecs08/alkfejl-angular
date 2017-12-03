@@ -1,0 +1,13 @@
+.details li {
+    list-style-type: none;
+}
+textarea:focus, input:focus {
+    outline: none;
+    background-color: lightgrey;
+}
+textarea, input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border-width: 0px;
+}

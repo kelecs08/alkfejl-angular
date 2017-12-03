@@ -1,0 +1,30 @@
+<div *ngIf="film">
+    <h4>{{film.title | uppercase}} film details</h4>
+    <ul class="details">
+      <li>
+        <label><i>title:</i>
+          <input [(ngModel)]="film.title" placeholder="Film title">
+        </label>
+      </li>
+      <li>
+        <label><i>director:</i>
+          <input [(ngModel)]="film.director" placeholder="Director">
+        </label>
+      </li>
+      <li>
+        <label><i>length:</i>
+          <input [(ngModel)]="film.length" placeholder="120">
+        </label>
+      </li>
+      <li>
+        <label><i>entry date:</i>
+          <input [(ngModel)]="film.entry_date" placeholder="Mon Dec 01 2017 00:00:00">
+        </label>
+      </li>
+      <li>
+        <label><i>synopsis:</i>
+          <textarea rows="5" [(ngModel)]="film.synopsis" placeholder="The film is about ..."></textarea>
+        </label>
+      </li>
+    </ul>
+  </div>
