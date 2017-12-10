@@ -1,7 +1,11 @@
-<h3>Films</h3>
-<ul class="films">
-  <li *ngFor="let film of films" (click)="onSelect(film)" [class.selected]="film === selectedFilm">  <!--onSelect(film) is a FilmsComponent method that executes, when clicking on th <li> element -->
-    <span class="badge">{{film.id}}</span> {{film.title}}
-  </li>
-</ul>
+<mat-card class="films">
+  <mat-card-title>
+    Films
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list role="films">
+      <mat-list-item *ngFor="let film of films" (click)="onSelect(film)" [class.selected]="film === selectedFilm" role="listitem">{{film.title}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
 <app-film-details [film]="selectedFilm"></app-film-details>

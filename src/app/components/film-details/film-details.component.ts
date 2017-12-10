@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Film } from '../../classes/film';
+import { Performance } from '../../classes/performance';
+import { PerformanceService } from '../../services/performance.service';
 
 @Component({
   selector: 'app-film-details',
@@ -7,12 +10,21 @@ import { Film } from '../../classes/film';
   styleUrls: ['./film-details.component.css']
 })
 export class FilmDetailsComponent implements OnInit {
+  performances: Performance[];
   @Input()
   film: Film;
-  
-  constructor() { }
+
+  constructor(
+    private performanceService: PerformanceService
+  ) { }
 
   ngOnInit() {
+    this.getPerformances();
+  }
+
+  getPerformances(): void{
+    this.performanceService.getPerformances()
+    .subscribe(performances => this.performances = performances);
   }
 
 }

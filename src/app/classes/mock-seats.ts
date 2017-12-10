@@ -1,0 +1,32 @@
+import { Seat } from './seat';
+
+export const SEATS: Seat[] = [
+    { id: 1, performanceId: 1, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 2, performanceId: 1, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 3, performanceId: 1, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 27, performanceId: 1, roomId: 1, rowNumber: 2, columnNumber: 2, status: "RESERVED", bookingName: "Kiss János", bookingTelephoneNumber: 123456789, bookingEmail: "vali@valami.com" },
+    { id: 4, performanceId: 2, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 5, performanceId: 2, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 6, performanceId: 2, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 7, performanceId: 3, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 8, performanceId: 3, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 9, performanceId: 3, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 10, performanceId: 4, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 11, performanceId: 4, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 12, performanceId: 4, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 13, performanceId: 5, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 14, performanceId: 5, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 15, performanceId: 5, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 16, performanceId: 6, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 17, performanceId: 6, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 18, performanceId: 6, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 19, performanceId: 7, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 20, performanceId: 7, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 21, performanceId: 7, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 22, performanceId: 8, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 23, performanceId: 8, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 24, performanceId: 8, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 25, performanceId: 9, roomId: 1, rowNumber: 1, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 26, performanceId: 9, roomId: 1, rowNumber: 1, columnNumber: 2, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null },
+    { id: 27, performanceId: 9, roomId: 1, rowNumber: 2, columnNumber: 1, status: "EMPTY", bookingName: null, bookingTelephoneNumber: null, bookingEmail: null }
+]

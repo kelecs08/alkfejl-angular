@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-content>
+    <h3>Login</h3>
+    <mat-form-field>
+      <input matInput type="email" placeholder="E-mail" #emailInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" #passwordInput>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" 
+            (click)="tryLogin(emailInput.value, passwordInput.value)">
+      Login
+    </button>
+    <div *ngIf="error">{{error}}</div>
+  </mat-card-content>
+</mat-card>

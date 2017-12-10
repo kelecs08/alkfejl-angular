@@ -18,7 +18,11 @@ export class FilmsComponent implements OnInit {
   }
 
   onSelect(film: Film): void {
-    this.selectedFilm = film;
+    if(this.selectedFilm != film) {
+      this.selectedFilm = film;
+    }else{
+      this.selectedFilm = undefined;
+    }
   }
 
   getFilms(): void {

@@ -1,47 +1,13 @@
- .selected {
-    background-color: rgb(62, 64, 65) !important;
-    color: white;
-  }
-  .films {
-    margin: 0 2em 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
-  .films li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: rgb(194, 193, 190);
-    margin: .5em;
-    padding: .3em 0 .3em 0;
-    height: 1.6em;
-    border-radius: 5px;
-  }
-  .films li.selected:hover {
-    background-color:  rgb(114, 12, 12) !important;
-    color: white;
-  }
-  .films li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-  }
-  .films .text {
-    position: relative;
-    top: -3px;
-  }
-  .films .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
+.selected {
+  background-color: rgb(62, 64, 65) !important;
+  color: white;
+}
+
+.films {
+  margin: 20px auto;
+  width: 700px;
+}
+mat-card-title {
+  color: #1A237E;
+  text-decoration: none;
+}
