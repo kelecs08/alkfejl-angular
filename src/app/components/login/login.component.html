@@ -2,15 +2,15 @@
   <mat-card-content>
     <h3>Login</h3>
     <mat-form-field>
-      <input matInput type="email" placeholder="E-mail" #emailInput>
+      <input matInput type="email" placeholder="E-mail" #email>
     </mat-form-field>
     <br>
     <mat-form-field>
-      <input matInput type="password" placeholder="Password" #passwordInput>
+      <input matInput type="password" placeholder="Password" #password>
     </mat-form-field>
     <br>
     <button mat-raised-button color="primary" 
-            (click)="tryLogin(emailInput.value, passwordInput.value)">
+            (click)="tryLogin(email.value, password.value)">
       Login
     </button>
     <div *ngIf="error">{{error}}</div>

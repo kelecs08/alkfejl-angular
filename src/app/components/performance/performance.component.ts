@@ -45,7 +45,7 @@ export class PerformanceComponent implements OnInit {
   }
 
   sendBooking(name: string, phone: number, email: string, seat: Seat){
-    console.log(email);
+    console.log("Booking");
   }
 
 

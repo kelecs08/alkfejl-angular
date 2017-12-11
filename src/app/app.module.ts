@@ -15,6 +15,7 @@ import { AppRouterModule } from './modules/app-router/app-router.module';
 import { AddformComponent } from './components/addform/addform.component';
 import { RoomService } from './services/room.service';
 import { LoginComponent } from './components/login/login.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoginComponent } from './components/login/login.component';
     FilmDetailsComponent,
     PerformanceComponent,
     AddformComponent,
-    LoginComponent
+    LoginComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
