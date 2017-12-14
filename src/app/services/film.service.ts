@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { HttpClient } from '@angular/common/http';
+import { url } from "../config/api";
 
 import { Film } from '../classes/film';
-import { FILMS } from '../classes/mock-films';
 
 @Injectable()
 export class FilmService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getFilms(): Film[] {
-    return FILMS;
+  public getFilms(): Observable<Film[]> {
+    return this.httpClient.get(url + 'film') as Observable<Film[]>;
   }
 
-  getFilm(id: number): Observable<Film> {
-    return of(FILMS.find(film => film.id === id));
+  public getFilm(id: number): Observable<Film> {
+    return this.httpClient.get(url + 'film/' + id) as Observable<Film>;
   }
   
 }

@@ -21,16 +21,27 @@ export class AddformComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getFilms();
-    this.getRooms();
+    this.filmService.getFilms().subscribe((getFilms: Film[]) => {
+      this.films = getFilms;
+    });
+    this.roomService.getRooms().subscribe((getRooms: Room[]) => {
+      this.rooms = getRooms;
+    })
   }
 
-  getFilms(): void {
-    this.films = this.filmService.getFilms();
-  }
+  public addFilm(title: string,
+    director: string,
+    synopsis: string,
+    length: number): void {
+  console.log("Add film");
+  console.log(title + director + synopsis + length);
+}
 
-  getRooms(): void {
-    this.rooms = this.roomService.getRooms();
+  public addPerformance(film: string,
+           startingTime: Date,
+           room: string,
+           length: number) {
+  console.log("Add performance");
+  console.log(startingTime);
   }
-
 }

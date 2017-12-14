@@ -6,18 +6,19 @@
   </span>
 
   <span class="right">
+     <!--
         <button mat-raised-button routerLink="/login">
             Login
         </button>
-    <!--
+      -->
       <button *ngIf="!authService.isLoggedIn()" mat-button routerLink="/login">
-          Bejelentkezés
+          Login
       </button>
       <button *ngIf="authService.isLoggedIn()" mat-button
               (click)="authService.logout()">
-          Kijelentkezés
+          Logout
       </button>
-    -->
+
   </span>
 </mat-toolbar>
 

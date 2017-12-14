@@ -5,5 +5,4 @@ export class Film {
     director: string;
     synopsis: string;
     length: number;
-    entry_date: Date;
 }

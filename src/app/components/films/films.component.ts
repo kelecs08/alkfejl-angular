@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../../classes/film';
-import { FILMS } from '../../classes/mock-films';
 import { FilmService } from '../../services/film.service';
 
 @Component({
   selector: 'app-films',
   templateUrl: './films.component.html',
-  styleUrls: ['./films.component.css']
+  styleUrls: ['./films.component.css'],
+  providers: [FilmService]
 })
 export class FilmsComponent implements OnInit {
-  films: Film[];
-  selectedFilm: Film;
+  private films: Film[];
+  private selectedFilm: Film;
+  
   constructor(private filmService: FilmService) { }
 
   ngOnInit() {
-    this.getFilms();
+    this.filmService.getFilms().subscribe((getFilms: Film[]) => {
+      this.films = getFilms;
+    })
   }
 
   onSelect(film: Film): void {
@@ -23,9 +26,5 @@ export class FilmsComponent implements OnInit {
     }else{
       this.selectedFilm = undefined;
     }
-  }
-
-  getFilms(): void {
-    this.films = this.filmService.getFilms();
   }
 }

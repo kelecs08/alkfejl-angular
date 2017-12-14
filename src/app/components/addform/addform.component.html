@@ -4,23 +4,23 @@
   </mat-card-title>
   <div>
     <mat-form-field>
-      <input matInput placeholder="Title">
+      <input matInput #filmTitle type="text" placeholder="Title">
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Director">
+      <input matInput #director type="text" placeholder="Director">
     </mat-form-field>
 
     <mat-form-field>
-      <textarea matInput placeholder="Synopsis"></textarea>
+      <textarea matInput #synopsis type="text" placeholder="Synopsis"></textarea>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Length">
+      <input matInput #length type="number" placeholder="Length">
     </mat-form-field>
   </div>
   <div>
-    <button mat-raised-button color="primary">Add film</button>
+    <button mat-raised-button color="primary" (click)="addFilm(filmTitle.value, director.value, synopsis.value, length.value)">Add film</button>
   </div>
 </mat-card>
 
@@ -31,25 +31,25 @@
     <div>
       <mat-form-field>
         <mat-select placeholder="Film">
-          <mat-option *ngFor="let film of films" value="film" (click)="addFilm(film)">{{film.title}}</mat-option>
+          <mat-option *ngFor="let film of films" value="film">{{film.title}}</mat-option>
         </mat-select>
       </mat-form-field>
-     <!--
+     
       <mat-form-field>
-          <input type="datetime-local" name="startingTime">
+          <input matInput #startingTime type="datetime-local" name="startingTime">
         </mat-form-field>
-      -->
+      
       <mat-form-field>
         <mat-select placeholder="Room">
-          <mat-option *ngFor="let room of rooms" value="rom">{{room.name}}</mat-option>
+          <mat-option *ngFor="let room of rooms" value="room">{{room.name}}</mat-option>
         </mat-select>
       </mat-form-field>
   
       <mat-form-field>
-        <input matInput placeholder="Length">
+        <input #length matInput placeholder="Length">
       </mat-form-field>
     </div>
     <div>
-      <button mat-raised-button color="primary" (click)="addPerformance(performance)">Add performance</button>
+      <button mat-raised-button color="primary" (click)="addPerformance(film, startingTime.value, room, length.value)">Add performance</button>
     </div>
   </mat-card>

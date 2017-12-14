@@ -3,15 +3,16 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 import { Room } from '../classes/room';
-import { ROOMS } from '../classes/mock-rooms';
+import { HttpClient } from '@angular/common/http';
+import { url } from '../config/api';
 
 @Injectable()
 export class RoomService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getRooms(): Room[] {
-    return ROOMS;
+  public getRooms(): Observable<Room[]> {
+    return this.httpClient.get(url + 'room') as Observable<Room[]>;
   }
 
 }
