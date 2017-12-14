@@ -35,4 +35,9 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  public tryLogin(email: string,
+                  password: string) {
+    console.log("Login " + email);
+  }
+
 }
