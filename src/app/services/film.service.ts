@@ -22,5 +22,9 @@ export class FilmService {
   public addFilm(film: Film): Observable<any> {
     return this.httpClient.post(url + 'films', film);
   }
+
+  public deleteFilm(id: number): Observable<any> {
+    return this.httpClient.delete(url + 'film' + id);
+  }
   
 }

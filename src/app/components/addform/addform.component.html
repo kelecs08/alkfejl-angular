@@ -31,12 +31,12 @@
     <div>
       <mat-form-field>
         <mat-select placeholder="Film">
-          <mat-option *ngFor="let film of films" value="film">{{film.title}}</mat-option>
+          <mat-option *ngFor="let film of films" value="film" >{{film.title}}</mat-option>
         </mat-select>
       </mat-form-field>
      
       <mat-form-field>
-          <input matInput #startingTime type="datetime-local" name="startingTime">
+          <input #startingTime matInput type="datetime-local" name="startingTime">
         </mat-form-field>
       
       <mat-form-field>
@@ -53,3 +53,26 @@
       <button mat-raised-button color="primary" (click)="addPerformance(film, startingTime.value, room, length.value)">Add performance</button>
     </div>
   </mat-card>
+
+  <mat-card class="add-room">
+      <mat-card-title>
+        Add room
+      </mat-card-title>
+      <div>
+        <mat-form-field>
+          <input matInput #roomName type="text" placeholder="Name">
+        </mat-form-field>
+    
+        <mat-form-field>
+          <input matInput #rowsNumber type="number" placeholder="Number of rows">
+        </mat-form-field>
+    
+        <mat-form-field>
+          <textarea matInput #columnsNumber type="number" placeholder="Number of columns"></textarea>
+        </mat-form-field>
+    
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="addRoom(roomName.value, rowsNumber.value, columnsNumber.value)">Add room</button>
+      </div>
+    </mat-card>

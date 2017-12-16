@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UiModule } from './modules/ui/ui.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { FilmsComponent } from './components/films/films.component';
@@ -15,7 +16,8 @@ import { AppRouterModule } from './modules/app-router/app-router.module';
 import { AddformComponent } from './components/addform/addform.component';
 import { RoomService } from './services/room.service';
 import { LoginComponent } from './components/login/login.component';
-import { BookingComponent } from './components/booking/booking.component';
+import { DeleteComponent } from './components/delete/delete.component';
+import { BookSeatComponent } from './components/book-seat/book-seat.component';
 
 
 @NgModule({
@@ -26,14 +28,16 @@ import { BookingComponent } from './components/booking/booking.component';
     PerformanceComponent,
     AddformComponent,
     LoginComponent,
-    BookingComponent
+    DeleteComponent,
+    BookSeatComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRouterModule,
     UiModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [FilmService, PerformanceService, SeatService, RoomService],
   bootstrap: [AppComponent]

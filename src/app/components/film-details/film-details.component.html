@@ -16,7 +16,7 @@
             </mat-list-item>
           </mat-list>
     </mat-tab>
-    <mat-tab class="performanceTimes" label="Performance times">
+    <mat-tab class="performanceTimes" label="Performance times" (click)="showPerformances()">
       <span *ngFor="let performance of performancesToSelectedFilm">
         <span><a routerLink="/booking/{{performance.id}}"><button mat-raised-button color="primary">{{performance.startingTime | date:'HH:mm'}}</button></a>&nbsp;&nbsp;</span>
       </span>

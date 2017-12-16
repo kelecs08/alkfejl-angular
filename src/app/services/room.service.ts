@@ -15,4 +15,8 @@ export class RoomService {
     return this.httpClient.get(url + 'room') as Observable<Room[]>;
   }
 
+  public deleteRoom(id: number): Observable<any> {
+    return this.httpClient.delete(url + 'room' + id);
+  }
+
 }

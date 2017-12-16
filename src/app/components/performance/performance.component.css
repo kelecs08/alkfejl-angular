@@ -1,10 +1,21 @@
-.booking-form {
-    margin: 20px auto;
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .booking-form > * {
-    width: 100%;
-  }
+.performance-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.performance-table {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  color: black;
+  width: 90%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}

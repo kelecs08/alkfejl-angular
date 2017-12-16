@@ -1,0 +1,44 @@
+<mat-card class="delete-film">
+  <mat-card-title>
+    Delete film
+  </mat-card-title>
+  <div>
+
+    <mat-form-field>
+      <mat-select placeholder="Film">
+        <mat-option *ngFor="let film of films" value="film" (click)="deleteFilm(film)">{{film.title}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+</mat-card>
+
+<mat-card class="delete-performance">
+  <mat-card-title>
+    Delete performance
+  </mat-card-title>
+  <div>   
+      
+    <mat-form-field>
+      <mat-select placeholder="Performance">
+        <mat-option *ngFor="let performance of performances" value="performance" (click)="deletePerformance(performance)">{{performance.film.title}}: {{performance.startingTime | date:'HH:mm'}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  </div>
+</mat-card>
+
+<mat-card class="delete-room">
+    <mat-card-title>
+      Delete room
+    </mat-card-title>
+    <div>   
+        
+      <mat-form-field>
+        <mat-select placeholder="Room">
+          <mat-option *ngFor="let room of rooms" value="performance" (click)="deleteRoom(room)">{{room.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+    </div>
+  </mat-card>

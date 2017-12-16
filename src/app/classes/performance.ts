@@ -1,7 +1,14 @@
+import { Room } from "./room";
+import { Film } from "./film";
+
 export class Performance {
     
-    id: number;
-    startingTime: Date;
-    filmId: number;
-    roomId: number;
+    public id: number;
+
+    public constructor(
+        public startingTime: Date,
+        public film: Film = null,
+        public room: Room = null
+    ) {}
+
 }

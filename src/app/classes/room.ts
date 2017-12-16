@@ -1,6 +1,11 @@
 export class Room {
-    id: number;
-    name: string;
-    rowsNumber: number;
-    columnsNumber: number;
+
+    public id: number;
+
+    public constructor(
+        public name: string,
+        public rowsNumber: number,
+        public columnsNumber: number
+    ) {}
+
 }
