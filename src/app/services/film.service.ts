@@ -18,5 +18,9 @@ export class FilmService {
   public getFilm(id: number): Observable<Film> {
     return this.httpClient.get(url + 'film/' + id) as Observable<Film>;
   }
+
+  public addFilm(film: Film): Observable<any> {
+    return this.httpClient.post(url + 'films', film);
+  }
   
 }

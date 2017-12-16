@@ -4,7 +4,6 @@ import { Film } from '../../classes/film';
 import { Room } from '../../classes/room';
 import { FilmService } from '../../services/film.service';
 import { RoomService } from '../../services/room.service';
-import { MateralDateTimePicker } from 'material-datetime-picker';
 
 @Component({
   selector: 'app-addform',
@@ -35,6 +34,7 @@ export class AddformComponent implements OnInit {
     synopsis: string,
     length: number): void {
   console.log("Add film");
+  this.filmService.addFilm(new Film(title, director, synopsis, length));
   console.log(title + director + synopsis + length);
 }
 
@@ -44,22 +44,6 @@ export class AddformComponent implements OnInit {
            length: number) {
   console.log("Add performance");
   console.log(startingTime);
-  }
-
-  public addFilm(title: string,
-                 director: string,
-                 synopsis: string,
-                 length: number): void {
-    console.log("Add film");
-    console.log(title + director + synopsis + length);
-  }
-
-  public addPerformance(film: string,
-                        startingTime: Date,
-                        room: string,
-                        length: number) {
-    console.log("Add performance");
-    console.log(startingTime);
   }
 
 }

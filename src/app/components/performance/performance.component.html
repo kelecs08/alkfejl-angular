@@ -1,29 +1,16 @@
-<mat-card class="booking-form">
+<mat-card class="performances">
   <mat-card-title>
-    Booking
+    Performances
   </mat-card-title>
-  <div>
-    <mat-form-field>
-      <input matInput id="name" placeholder="Name">
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput id="phone" placeholder="Telephone number">
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput id="email" type="email" placeholder="Email">
-      </mat-form-field>
-
-    <mat-form-field>
-      <mat-select placeholder="Seat:">
-        <span *ngFor="let seat of seats">
-          <mat-option *ngIf="seat.status === 'EMPTY'" id="seat" value="seat">Row:{{seat.rowNumber}} Column:{{seat.columnNumber}}</mat-option>
-        </span>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div>
-    <button mat-raised-button color="primary" (click)="sendBooking()">Send booking</button>
-  </div>
+  <mat-card-content>
+  <table>
+    <tr><th>Film title</th><th>Strarting time</th><th>Room</th></tr>
+      <mat-list role="performances">
+        <mat-list-item *ngFor="let performance of performances" role="listitem">
+          <tr><td>{{performance.filmId}}</td><td>{{performance.startingTime}}</td><td>{{performance.roomId}}</td></tr>
+      </mat-list-item>
+    </mat-list>
+  </table>
+  </mat-card-content>
 </mat-card>
+<app-film-details [film]="selectedFilm"></app-film-details>

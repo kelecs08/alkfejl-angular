@@ -15,13 +15,13 @@
         <input matInput id="email" type="email" placeholder="Email">
       </mat-form-field>
 
-    <mat-form-field>
+ <!--   <mat-form-field>
       <mat-select placeholder="Seat:">
         <span *ngFor="let seat of seats">
           <mat-option *ngIf="seat.status === 'EMPTY'" id="seat" value="seat">Row:{{seat.rowNumber}} Column:{{seat.columnNumber}}</mat-option>
         </span>
       </mat-select>
-    </mat-form-field>
+    </mat-form-field> -->
   </div>
   <div>
     <button mat-raised-button color="primary">Send booking</button>

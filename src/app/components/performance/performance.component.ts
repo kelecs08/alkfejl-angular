@@ -12,33 +12,31 @@ import { SeatService } from '../../services/seat.service';
 @Component({
   selector: 'app-performance',
   templateUrl: './performance.component.html',
-  styleUrls: ['./performance.component.css']
+  styleUrls: ['./performance.component.css'],
+  providers: [PerformanceService]
 })
 export class PerformanceComponent implements OnInit {
 
   @Input() 
-  performance: Performance;
-  seats: Seat[];
+  performances: Performance[];
+  //seats: Seat[];
 
   constructor(
-    private route: ActivatedRoute,
-    private location: Location,
+    //private route: ActivatedRoute,
+    //private location: Location,
     private performanceService: PerformanceService,
-    private seatService: SeatService
+    //private seatService: SeatService
   ) { }
 
   ngOnInit() {
-    this.getPerformance();
-    this.getSeatsByPerformance();
+    this.performanceService.getPerformances().subscribe((getPerformances: Performance[]) => {
+      this.performances = getPerformances;
+      console.log("Perf get: " + this.performances.length);
+    })
+   // this.getSeatsByPerformance();
   }
 
-  getPerformance(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.performanceService.getPerformance(id)
-    .subscribe(performance => this.performance = performance);
-  }
-
-  getSeatsByPerformance(): void {
+  /*getSeatsByPerformance(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.seatService.getSeatsByPerformance(id)
     .subscribe(seats => this.seats = seats);
@@ -46,7 +44,7 @@ export class PerformanceComponent implements OnInit {
 
   sendBooking(name: string, phone: number, email: string, seat: Seat){
     console.log("Booking");
-  }
+  }*/
 
 
 

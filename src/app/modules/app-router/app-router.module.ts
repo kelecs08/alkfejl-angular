@@ -7,12 +7,14 @@ import { AddformComponent } from '../../components/addform/addform.component';
 import { LoginComponent } from '../../components/login/login.component';
 import { RouteGuardService } from '../../services/route-guard.service';
 import { AuthService } from '../../services/auth.service';
+import { BookingComponent } from '../../components/booking/booking.component';
 
 const appRoutes: Routes = [
   { path: '', canActivateChild: [RouteGuardService], children: [
     {path: '',  redirectTo: '/films', pathMatch:'full'},
     { path: 'films', component: FilmsComponent },
-    { path: 'performance/:id', component: PerformanceComponent },
+    { path: 'performance/:id', component: BookingComponent },
+    { path: 'performance', component: PerformanceComponent },
     { path: 'add', component: AddformComponent, data: { roles: ['ADMIN'] } },
     { path: 'login', component: LoginComponent }
   ]}

@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { HttpClient } from '@angular/common/http';
 
-import { PERFORMANCES } from '../classes/mock-performances';
 import { Performance } from '../classes/performance';
+import { url } from '../config/api';
 
 
 @Injectable()
 export class PerformanceService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getPerformances(): Observable<Performance[]> {
-    return of(PERFORMANCES);
+  public getPerformances(): Observable<Performance[]> {
+    return this.httpClient.get(url + 'performance') as Observable<Performance[]>;
   }
   
-  getPerformance(id: number): Observable<Performance> {
-    return of(PERFORMANCES.find(performance => performance.id === id));
-  }
+  /*public getPerformance(id: number): Observable<Performance> {
+    return this.httpClient.get(url + 'performance/' + id) as Observable<Performance>;
+  }*/
 
 }

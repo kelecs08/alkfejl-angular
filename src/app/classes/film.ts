@@ -1,8 +1,9 @@
 export class Film {
+    public id: number;
     
-    id: number;
-    title: string;
-    director: string;
-    synopsis: string;
-    length: number;
+    constructor(
+        public title: string,
+        public director: string,
+        public synopsis: string,
+        public length: number) {}
 }

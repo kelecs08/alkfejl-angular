@@ -2,19 +2,15 @@
   <div class="title">{{title}}</div>
   <span class="left">
     <button mat-raised-button routerLink="/films">Films</button>
+    <button mat-raised-button routerLink="/performance">Performances</button>
     <button mat-raised-button routerLink="/add">Add film or performance</button>
   </span>
 
   <span class="right">
-     <!--
-        <button mat-raised-button routerLink="/login">
-            Login
-        </button>
-      -->
-      <button *ngIf="!authService.isLoggedIn()" mat-button routerLink="/login">
+      <button *ngIf="!authService.isLoggedIn()" mat-raised-button routerLink="/login">
           Login
       </button>
-      <button *ngIf="authService.isLoggedIn()" mat-button
+      <button *ngIf="authService.isLoggedIn()" mat-raised-button
               (click)="authService.logout()">
           Logout
       </button>
