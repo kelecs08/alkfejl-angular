@@ -1,61 +1,24 @@
-<div class="performance-header">
-  <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Type in the keywords...">
-  </mat-form-field>
-</div>
-
-<div class="performance-table">
-  <mat-table [dataSource]="dataSource" matSort>
-    
-    <ng-container matColumnDef="startingTime">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Starting time </mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.startingTime | date:'HH:mm'}}</mat-cell>
-    </ng-container>
-    
-  
-    <ng-container matColumnDef="filmTitle">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Film title </mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.film.title}}</mat-cell>
-    </ng-container>
-
-    
-    <ng-container matColumnDef="roomName">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Room name </mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row.room.name}}</mat-cell>
-    </ng-container>
-
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
-  </div>
-
-
-<!-- <mat-card class="performances">
+<mat-card>
   <mat-card-title>
     Performances
   </mat-card-title>
   <mat-card-content>
-  <table>
-    <tr><th>Film title</th><th>Strarting time</th><th>Room</th></tr>
-      <mat-list role="performances">
-        <mat-list-item *ngFor="let performance of performances" role="listitem">
-          <tr><td>{{performance.film.title}}</td><td>{{performance.startingTime | date:'HH:mm'}}</td><td>{{performance.room.name}}</td></tr>
-      </mat-list-item>
-    </mat-list>
-  </table>
-  </mat-card-content>
-</mat-card> -->
+  <div class="w3-container">
 
-<!--
-<table>
-    <tr>
-      <th>Starting time</th><th>Film title</th><th>Room name</th>
-    </tr>
-    <div *ngFor="let performance of performances">
-    <tr>
-      <td rowspan="4">{{performance.startingTime | date:'HH:mm'}}</td><td rowspan="4">{{performance.film.title}}</td><td rowspan="4">{{performance.room.name}}</td>
-    </tr>
-    </div>
-</table>
--->
+    <table class="w3-table-all w3-hoverable">
+      <thead>
+        <tr class="w3-light-grey">
+          <th>Film title</th>
+          <th>Starting time</th>
+          <th>Room</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let performance of performances">
+        <td>{{performance.film.title}}</td>
+        <td>{{performance.startingTime | date:'HH:mm'}}</td>
+        <td>{{performance.room.name}}</td>
+      </tr>
+    </table>
+  </div>
+  </mat-card-content>
+</mat-card>
