@@ -27,17 +27,4 @@ export class FilmDetailsComponent implements OnInit {
     });
    }
 
-   showPerformances(): void {
-    this.performances.forEach((item, index) => {
-      console.log(item.film.id);
-      console.log(this.film.id);
-      console.log(item.startingTime);
-      if(item.film.id == this.film.id) {
-        this.performancesToSelectedFilm.push(item);
-        console.log(this.performancesToSelectedFilm.length);
-        console.log("push");
-      }
-    });
-   }
-
 }
