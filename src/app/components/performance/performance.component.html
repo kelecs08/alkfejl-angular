@@ -3,17 +3,17 @@
     Performances
   </mat-card-title>
   <mat-card-content>
-  <div class="w3-container">
+  <div>
 
-    <table class="w3-table-all w3-hoverable">
+    <table>
       <thead>
-        <tr class="w3-light-grey">
+        <tr>
           <th>Film title</th>
           <th>Starting time</th>
           <th>Room</th>
         </tr>
       </thead>
-      <tr *ngFor="let performance of performances">
+      <tr *ngFor="let performance of performances" class="row">
         <td>{{performance.film.title}}</td>
         <td>{{performance.startingTime | date:'HH:mm'}}</td>
         <td>{{performance.room.name}}</td>

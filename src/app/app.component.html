@@ -3,7 +3,9 @@
   <span class="left">
     <button mat-raised-button routerLink="/films">Films</button>
     <button mat-raised-button routerLink="/performance">Performances</button>
+    <!--
     <button mat-raised-button routerLink="/booking">Booking</button>
+    -->
     <button mat-raised-button routerLink="/add" *ngIf="authService.userHasRole(['ADMIN'])">Add</button>
     <button mat-raised-button routerLink="/delete" *ngIf="authService.userHasRole(['ADMIN'])">Delete</button>
   </span>
