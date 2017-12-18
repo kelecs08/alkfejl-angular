@@ -18,6 +18,7 @@ import { RoomService } from './services/room.service';
 import { LoginComponent } from './components/login/login.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { BookSeatComponent } from './components/book-seat/book-seat.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BookSeatComponent } from './components/book-seat/book-seat.component';
     AddformComponent,
     LoginComponent,
     DeleteComponent,
-    BookSeatComponent
+    BookSeatComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,6 @@ import { BookSeatComponent } from './components/book-seat/book-seat.component';
     MatTableModule
   ],
   providers: [FilmService, PerformanceService, SeatService, RoomService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, DeleteComponent]
 })
 export class AppModule { }

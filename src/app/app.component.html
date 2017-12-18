@@ -9,6 +9,7 @@
   </span>
 
   <span class="right">
+      <button mat-raised-button routerLink="/register">Register</button>
       <button *ngIf="!authService.isLoggedIn()" mat-raised-button routerLink="/login">
           Login
       </button>

@@ -4,7 +4,7 @@
   </mat-card-title>
   <div>
     <mat-form-field>
-      <input matInput #filmTitle type="text" placeholder="Title">
+      <input matInput #filmTitle type="text" placeholder="Title" required>
     </mat-form-field>
 
     <mat-form-field>
@@ -20,7 +20,7 @@
     </mat-form-field>
   </div>
   <div>
-    <button mat-raised-button color="primary" (click)="addFilm(filmTitle.value, director.value, synopsis.value, length.value)">Add film</button>
+    <button mat-raised-button color="primary" (click)="addFilm(filmTitle.value, director.value, synopsis.value, length.value)"><a routerLink="/films">Add film</a></button>
   </div>
 </mat-card>
 
@@ -31,12 +31,12 @@
     <div>
       <mat-form-field>
         <mat-select placeholder="Film">
-          <mat-option *ngFor="let film of films" value="film" >{{film.title}}</mat-option>
+          <mat-option *ngFor="let film of films" value="film">{{film.title}}</mat-option>
         </mat-select>
       </mat-form-field>
      
       <mat-form-field>
-          <input #startingTime matInput type="datetime-local" name="startingTime">
+          <input #startingTime matInput type="datetime-local" name="startingTime" required>
         </mat-form-field>
       
       <mat-form-field>
@@ -46,11 +46,11 @@
       </mat-form-field>
   
       <mat-form-field>
-        <input #length matInput placeholder="Length">
+        <input #length matInput type="number" placeholder="Length">
       </mat-form-field>
     </div>
     <div>
-      <button mat-raised-button color="primary" (click)="addPerformance(film, startingTime.value, room, length.value)">Add performance</button>
+      <button mat-raised-button color="primary" (click)="addPerformance(film, startingTime.value, room, length.value)"><a routerLink="/performance">Add performance</a></button>
     </div>
   </mat-card>
 
@@ -60,19 +60,19 @@
       </mat-card-title>
       <div>
         <mat-form-field>
-          <input matInput #roomName type="text" placeholder="Name">
+          <input matInput #roomName type="text" placeholder="Name" required>
         </mat-form-field>
     
         <mat-form-field>
-          <input matInput #rowsNumber type="number" placeholder="Number of rows">
+          <input matInput #rowsNumber type="number" placeholder="Number of rows" required>
         </mat-form-field>
     
         <mat-form-field>
-          <textarea matInput #columnsNumber type="number" placeholder="Number of columns"></textarea>
+          <input matInput #columnsNumber type="number" placeholder="Number of columns" required>
         </mat-form-field>
     
       </div>
       <div>
-        <button mat-raised-button color="primary" (click)="addRoom(roomName.value, rowsNumber.value, columnsNumber.value)">Add room</button>
+        <button mat-raised-button color="primary" (click)="addRoom(roomName.value, rowsNumber.value, columnsNumber.value)"><a routerLink="/performance">Add room</a></button>
       </div>
     </mat-card>

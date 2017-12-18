@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-content>
-    <h3>Login</h3>
+    <h3>Register</h3>
     <mat-form-field>
       <input matInput type="text" placeholder="Username" #userNameInput required>
     </mat-form-field>
@@ -10,8 +10,8 @@
     </mat-form-field>
     <br>
     <button mat-raised-button color="primary" 
-            (click)="tryLogin(userNameInput.value, passwordInput.value)">
-      Login
+            (click)="register(userNameInput.value, passwordInput.value)">
+      Register
     </button>
     <div *ngIf="error">{{errorMessage}}</div>
   </mat-card-content>

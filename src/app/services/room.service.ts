@@ -15,6 +15,10 @@ export class RoomService {
     return this.httpClient.get(url + 'room') as Observable<Room[]>;
   }
 
+  public addRoom(room: Room): Observable<any> {
+    return this.httpClient.post(url + 'room/add', room);
+  }
+
   public deleteRoom(id: number): Observable<any> {
     return this.httpClient.delete(url + 'room' + id);
   }

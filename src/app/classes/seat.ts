@@ -1,5 +1,7 @@
 export class Seat {
-    id: number;
+
+    public id: number;
+    
     performanceId: number;
     roomId: number;
     rowNumber: number;

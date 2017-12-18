@@ -5,6 +5,7 @@ import { Performance } from '../../classes/performance';
 import { PerformanceService } from '../../services/performance.service';
 import { Room } from '../../classes/room';
 import { RoomService } from '../../services/room.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-delete',
@@ -16,6 +17,7 @@ export class DeleteComponent implements OnInit {
   films: Film[];
   performances: Performance[];
   rooms: Room[];
+  selectedFilm: Film = null;
 
   constructor(
     private filmService: FilmService,
@@ -35,15 +37,16 @@ export class DeleteComponent implements OnInit {
     });
   }
 
-  public deleteFilm(film: Film): void {
-    this.filmService.deleteFilm(film.id);
+  public deleteFilm(): void {
+   // console.log(this.selectedFilm.id);
+   // this.filmService.deleteFilm(this.selectedFilm.id);
   }
 
   public deletePerformance(performance: Performance): void {
-    this.performanceService.deletePerformance(performance.id);
+    //this.performanceService.deletePerformance(performance.id);
   }
 
   public deleteRoom(room: Room): void {
-    this.roomService.deleteRoom(room.id);
+    //this.roomService.deleteRoom(room.id);
   }
 }

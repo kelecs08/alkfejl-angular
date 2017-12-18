@@ -33,24 +33,20 @@ export class AddformComponent implements OnInit {
                 director: string,
                 synopsis: string,
                 length: number): void {
-    console.log("Add film");
     this.filmService.addFilm(new Film(title, director, synopsis, length));
-    console.log(title + director + synopsis + length);
   }
 
   public addPerformance(filmId: string,
            startingTime: Date,
            room: Room,
            length: number) {
-    console.log("Add performance");
-    console.log(startingTime);
-    console.log(filmId);
+    
   }
 
   public addRoom(roomName: string,
                 rowsNumber: number,
                 columnsNumber: number) {
-    console.log("Add room");
+    this.roomService.addRoom(new Room(name, rowsNumber, columnsNumber));
   }
 
 }

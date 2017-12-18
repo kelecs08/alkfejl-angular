@@ -9,6 +9,7 @@ import { RouteGuardService } from '../../services/route-guard.service';
 import { AuthService } from '../../services/auth.service';
 import { DeleteComponent } from '../../components/delete/delete.component';
 import { BookSeatComponent } from '../../components/book-seat/book-seat.component';
+import { RegisterComponent } from '../../components/register/register.component';
 
 const appRoutes: Routes = [
   { path: '', canActivateChild: [RouteGuardService], children: [
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
     { path: 'booking', component: BookSeatComponent, data: { roles: ['USER', 'ADMIN'] } },
     { path: 'add', component: AddformComponent, data: { roles: ['ADMIN'] } },
     { path: 'delete', component: DeleteComponent, data: { roles: ['ADMIN'] } },
-    { path: 'login', component: LoginComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent }
   ]}
 ];
 
