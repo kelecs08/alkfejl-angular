@@ -14,7 +14,7 @@ describe('Film details functionality', () => {
         element(by.cssContainingText('.films', 'The hangover')).click();
         element(by.cssContainingText('.mat-tab-label', 'Performance times')).click();
         var buttons = element.all(by.deepCss('button'));
-        expect(buttons.count()).toEqual(6);
+        expect(buttons.count()).toEqual(7);
     });
 
     it('should navigate to the booking page', () => {
